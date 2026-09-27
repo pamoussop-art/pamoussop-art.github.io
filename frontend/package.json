@@ -1,0 +1,30 @@
+{
+  "name": "portfolio-pphj",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Portfolio de Prince Henri Junior Pamousso — site public + espace administrateur",
+  "scripts": {
+    "start": "ng serve --open",
+    "build": "ng build && node scripts/spa-404.mjs",
+    "test": "tsx --test tests/validation.test.ts tests/logic.test.ts tests/admin-service.test.ts tests/cloudinary-auth.test.ts tests/demo-storage.test.ts",
+    "deploy": "node scripts/check-config.mjs && ng build --base-href=/ && node scripts/spa-404.mjs && npx angular-cli-ghpages --dir=dist/portfolio/browser --no-silent"
+  },
+  "dependencies": {
+    "@angular/common": "^20.3.0",
+    "@angular/compiler": "^20.3.0",
+    "@angular/core": "^20.3.0",
+    "@angular/forms": "^20.3.0",
+    "@angular/platform-browser": "^20.3.0",
+    "@angular/router": "^20.3.0",
+    "firebase": "^12.0.0",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.8.0"
+  },
+  "devDependencies": {
+    "@angular/build": "^20.3.0",
+    "@angular/cli": "^20.3.0",
+    "@angular/compiler-cli": "^20.3.0",
+    "tsx": "^4.19.0",
+    "typescript": "~5.8.3"
+  }
+}
